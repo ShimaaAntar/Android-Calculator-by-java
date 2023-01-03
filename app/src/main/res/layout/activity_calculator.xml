@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <TextView
+        android:id="@+id/result_tx"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".16"
+        android:hint="0.0"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <LinearLayout
+        android:id="@+id/row5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="4"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintTop_toBottomOf="@id/result_tx">
+
+        <Button
+            android:id="@+id/but_c"
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorOrange"
+            android:onClick="onAC"
+            android:text="C"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorOrange"
+            android:onClick="onOperateClick"
+            android:text="√"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorOrange"
+            android:onClick="onOperateClick"
+            android:text="sin"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorOrange"
+            android:onClick="onOperateClick"
+            android:text="cos" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="4"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintTop_toBottomOf="@id/row5">
+
+        <Button
+            android:id="@+id/but_7"
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="7"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="8"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="9"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorOrange"
+            android:onClick="onOperateClick"
+            android:text="+" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="4"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintTop_toBottomOf="@id/row1">
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="4"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="5"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="6"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorOrange"
+            android:onClick="onOperateClick"
+            android:text="-" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="4"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintTop_toBottomOf="@id/row2">
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="1"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="2"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_gray"
+            android:onClick="onDigitalClick"
+            android:text="3"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperateClick"
+            android:backgroundTint="@color/colorOrange"
+            android:text="*" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="4"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintTop_toBottomOf="@id/row3">
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDotClick"
+            android:text="."
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigitalClick"
+            android:text="0"
+            app:toggleCheckedStateOnClick="false" />
+        <Button
+            style="@style/calcDigital"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="="
+            android:onClick="onEqualClick"
+            android:layout_weight="1"
+
+            />
+
+        <Button
+            style="@style/calcOperator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperateClick"
+            android:backgroundTint="@color/colorOrange"
+            android:text="/" />
+
+    </LinearLayout>
+
+
+
+        
+        
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
